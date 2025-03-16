@@ -32,7 +32,17 @@ cards = [
 ]
 
 # Write your code here.
-def sort_cards(card_list):
-    pass
 
-print(sort_cards(cards))        # ['Chase', 'Wells Fargo', 'Citi']
+# start w helper function
+def users(card):
+    return card['num_users']
+
+def sort_cards(card_list):
+    # map method can key into specific values and return them, but no sorting?
+    # cards = list(map(lambda card: card['num_users'], card_list))# [20, 54, 13]
+    in_order = sorted(card_list, key=users, reverse=True)
+    companies = map(lambda company: company['company'], in_order)
+    print(f'companies map object: {companies}')
+    # print(f'companies list: {list(companies)}')   # only use list() for test printing -> comment this print out and use list in the return statement
+    return list(companies)
+print(sort_cards(cards))       # ['Chase', 'Wells Fargo', 'Citi']

@@ -42,8 +42,15 @@ teachers = [
 ]
 
 # Write your code here.
-def sort_teachers_by_classroom_capacity(card_list):
-    pass
 
-print(sort_teachers_by_classroom_capacity(teachers)) 
+# helper function to key into classroom capacity
+def capacity(teacher):
+  return teacher['classroom']['capacity']
+
+def sort_teachers_by_classroom_capacity(teacher_list):
+    sorting = sorted(teacher_list, key=capacity)
+    teachers_sorted = map(lambda teacher: teacher['name'], sorting)
+    return list(teachers_sorted)
+
+print(sort_teachers_by_classroom_capacity(teachers))
 # Richly Emiardson, Emily Richardson, Richard Emilyson
