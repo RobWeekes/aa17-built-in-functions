@@ -84,5 +84,12 @@ lord_of_the_rings = Book.create_series(
     "The Two Towers",             # args
     "The Return of the King")     # args
 
-print(lord_of_the_rings)
+print(lord_of_the_rings)  # series (list)
 # [The Fellowship of the Ring by J.R.R. Tolkien, The Two Towers by J.R.R. Tolkien, The Return of the King by J.R.R. Tolkien]
+
+# Unpack the lord_of_the_rings list into the individual books.
+fellowship_of_the_ring, two_towers, return_of_the_king = lord_of_the_rings
+
+print(fellowship_of_the_ring)  # The Fellowship of the Ring by J.R.R. Tolkien
+print(two_towers)  # The Two Towers by J.R.R. Tolkien
+print(return_of_the_king)  # The Return of the King by J.R.R. Tolkien
