@@ -81,3 +81,5 @@ print(map_to_names(unique_models))  # iPhone 13 Pro, Galaxy S22+, Pixel 6
 # It returns False
 # So the phone is excluded from the filter results
 # The result is that only the first occurrence of each phone model passes through the filter.
+
+
